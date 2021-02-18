@@ -5,16 +5,20 @@
     :wonderfulCV="wonderfulCV"
     :pageIndex="index"
   ></Page>
+  <GithubCorner url="https://github.com/satouriko/wonderfulcv"
+                colorScheme='green'></GithubCorner>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import GithubCorner from 'vue-github-corners/src/GithubCorner.vue'
 import Page from './components/Page.vue'
 import wonderfulCV from '../wonderfulcv.config'
 
 export default defineComponent({
   components: {
-    Page
+    Page,
+    GithubCorner
   },
   setup () {
     return { wonderfulCV }
@@ -37,5 +41,11 @@ html {
 body {
   margin: 0;
   padding: 0;
+}
+
+@media print {
+  #vue-github-corner {
+    display: none;
+  }
 }
 </style>

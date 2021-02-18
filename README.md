@@ -21,4 +21,12 @@ This project is inspired by [WonderCV](https://www.wondercv.com),
 intended for creating beautiful CVs with Web technologies.
 For English users, try to make their CVs with [LaTeX](https://www.overleaf.com/latex/templates/tagged/cv) maybe not a bad choice.
 However, for Chinese users, it's too tedious to make LaTeX render Chinese characters properly.
-That why this project was born.
+That's why this project was born.
+
+Although I believe it should be a great tool for making English CVs too,
+since it's originally designed for my personal's desperate need of making a CV in Chinese,
+I haven't add those features useful in English yet, such as
+English fonts, italic font style, small capitals font style, etc.
+I'll add them sooner or later.
+
+To use, just fill in `wonderfulcv.config.ts` and `wonderfulcv.config.css` and you'll be good to go.
