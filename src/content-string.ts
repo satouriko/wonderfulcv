@@ -1,6 +1,7 @@
-import {ContentString, EmailWithClassName, TelWithClassName, UrlWithClassName} from './wonderfulcv'
+import { CopyWritingCorrectService } from 'copywriting-correct'
+
+import { ContentString, EmailWithClassName, TelWithClassName, UrlWithClassName } from './wonderfulcv'
 import wonderfulCV from '../wonderfulcv.config'
-import {CopyWritingCorrectService} from "copywriting-correct";
 
 export const ContentStringMixin = {
   methods: {
