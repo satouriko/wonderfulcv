@@ -1,6 +1,6 @@
 import { WonderfulCV } from './src/wonderfulcv'
 
-const wonderfulCV: WonderfulCV<'concise', 'professional'> = {
+const wonderfulCV: WonderfulCV = {
   arrangement: {
     basicInfoStyle: 'concise',
     basicInfoLayout: 'center',

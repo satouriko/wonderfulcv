@@ -5,7 +5,21 @@ export interface StringWithClassName {
   className?: string
 }
 
-export interface WonderfulCV<T extends BasicInfoStyle, P extends SectionTitleStyle> {
+export type WonderfulCV =
+  | WonderfulCV_T<'text', 'professional'>
+  | WonderfulCV_T<'text', 'fresh'>
+  | WonderfulCV_T<'text', 'prominent'>
+  | WonderfulCV_T<'text', 'icon'>
+  | WonderfulCV_T<'icon', 'professional'>
+  | WonderfulCV_T<'icon', 'fresh'>
+  | WonderfulCV_T<'icon', 'prominent'>
+  | WonderfulCV_T<'icon', 'icon'>
+  | WonderfulCV_T<'concise', 'professional'>
+  | WonderfulCV_T<'concise', 'fresh'>
+  | WonderfulCV_T<'concise', 'prominent'>
+  | WonderfulCV_T<'concise', 'icon'>
+
+export interface WonderfulCV_T<T extends BasicInfoStyle, P extends SectionTitleStyle> {
   arrangement: {
     basicInfoStyle: T
     basicInfoLayout: BasicInfoLayout

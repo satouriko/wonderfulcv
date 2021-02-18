@@ -1,27 +1,37 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <Page
+    v-for="(_, index) of wonderfulCV.pages"
+    :key="index"
+    :wonderfulCV="wonderfulCV"
+    :pageIndex="index + 1"
+  ></Page>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
+import Page from './components/Page.vue'
+import wonderfulCV from '../wonderfulcv.config'
 
 export default defineComponent({
-  name: 'App',
   components: {
-    HelloWorld
+    Page
+  },
+  setup () {
+    return { wonderfulCV }
   }
 })
 </script>
 
 <style>
-#app {
+html {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-size: 4mm;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 </style>
