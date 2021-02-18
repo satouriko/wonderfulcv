@@ -1,6 +1,7 @@
 {
   "name": "wonderfulcv",
   "version": "0.0.0",
+  "license": "MIT",
   "scripts": {
     "serve": "vite preview",
     "build": "vuedx-typecheck . && vite build",
