@@ -500,7 +500,7 @@
     "@types/webpack-sources" "*"
     source-map "^0.6.0"
 
-"@typescript-eslint/eslint-plugin@4":
+"@typescript-eslint/eslint-plugin@^4":
   version "4.15.1"
   resolved "https://registry.npm.taobao.org/@typescript-eslint/eslint-plugin/download/@typescript-eslint/eslint-plugin-4.15.1.tgz#835f64aa0a403e5e9e64c10ceaf8d05c3f015180"
   integrity sha1-g19kqgpAPl6eZMEM6vjQXD8BUYA=
@@ -2219,6 +2219,11 @@ copy-webpack-plugin@^5.1.1:
     schema-utils "^1.0.0"
     serialize-javascript "^4.0.0"
     webpack-log "^2.0.0"
+
+copywriting-correct@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.npm.taobao.org/copywriting-correct/download/copywriting-correct-1.0.7.tgz#90d480d1e912528ae0947564b7629494a3a95969"
+  integrity sha1-kNSA0ekSUorglHVkt2KUlKOpWWk=
 
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"

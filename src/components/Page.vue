@@ -14,6 +14,10 @@
       :pageIndex="pageIndex"
       :sectionIndex="index"
     ></Section>
+    <Footer
+      :wonderfulCV="wonderfulCV"
+      :pageIndex="pageIndex"
+    ></Footer>
   </div>
 </template>
 
@@ -22,9 +26,10 @@ import { defineComponent, PropType } from 'vue'
 import { WonderfulCV } from '../wonderfulcv'
 import BasicInfo from './BasicInfo.vue'
 import Section from './Section.vue'
+import Footer from './Footer.vue'
 
 export default defineComponent({
-  components: { Section, BasicInfo },
+  components: { Footer, Section, BasicInfo },
   props: {
     wonderfulCV: {
       type: Object as PropType<WonderfulCV>,

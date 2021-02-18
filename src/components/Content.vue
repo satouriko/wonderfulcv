@@ -20,7 +20,7 @@
         class="description"
       >
         <span class="highlight">{{ getDescriptionHighlight(description) }}</span>
-        {{ getDescriptionRest(description) }}
+        <span>{{ getDescriptionRest(description) }}</span>
       </li>
     </ul>
   </div>
@@ -63,14 +63,14 @@ export default defineComponent({
   methods: {
     getDescriptionHighlight (desc) {
       if (!this.content.descriptionHighlightSeparator) return null
-      const str = this.getContentString(desc)
+      const str = this.getContentString(desc, true)
       return str.split(this.content.descriptionHighlightSeparator)[0] +
         this.content.descriptionHighlightSeparator
     },
     getDescriptionRest (desc) {
       const highlight = this.getDescriptionHighlight(desc)
-      if (!highlight) return desc
-      return desc.substring(highlight.length)
+      if (!highlight) return this.getContentString(desc, true)
+      return this.getContentString(desc, true).substring(highlight.length)
     }
   },
   mixins: [ContentStringMixin]

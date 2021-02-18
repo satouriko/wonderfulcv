@@ -1,4 +1,5 @@
 import { WonderfulCV } from './src/wonderfulcv'
+import {CopyWritingCorrectService} from "copywriting-correct";
 
 const wonderfulCV: WonderfulCV = {
   arrangement: {
@@ -87,7 +88,10 @@ const wonderfulCV: WonderfulCV = {
       }]
     }],
     justifyContent: 'space-evenly'
-  }]
+  }],
+  plugins: [
+    new CopyWritingCorrectService()
+  ]
 }
 
 export default wonderfulCV

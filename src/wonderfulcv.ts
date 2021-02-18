@@ -1,3 +1,5 @@
+import {CopyWritingCorrectService} from "copywriting-correct";
+
 export type ContentString = string | StringWithClassName
 
 export type StringWithClassName =
@@ -49,6 +51,7 @@ export interface WonderfulCV_T<T extends BasicInfoStyle, P extends SectionTitleS
   photo?: string // url
   basicInfo: Array<BasicInfo<T>> | Array<BasicInfoRow<T>>
   pages: Array<Page<P>>
+  plugins: Array<CopyWritingCorrectService>
 }
 
 export type BasicInfo<T extends BasicInfoStyle> = T extends 'text'
