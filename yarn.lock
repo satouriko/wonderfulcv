@@ -7995,13 +7995,6 @@ vue-eslint-parser@^7.5.0:
     esquery "^1.4.0"
     lodash "^4.17.15"
 
-vue-github-corners@^1.2.3:
-  version "1.2.3"
-  resolved "https://registry.npm.taobao.org/vue-github-corners/download/vue-github-corners-1.2.3.tgz#6d5db136bfe5e5acf8229809ddfa8d3f6b639182"
-  integrity sha1-bV2xNr/l5az4IpgJ3fqNP2tjkYI=
-  dependencies:
-    vue "^2.1.0"
-
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.npm.taobao.org/vue-hot-reload-api/download/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
@@ -8039,11 +8032,6 @@ vue-template-es2015-compiler@^1.9.0:
   version "1.9.1"
   resolved "https://registry.npm.taobao.org/vue-template-es2015-compiler/download/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha1-HuO8mhbsv1EYvjNLsV+cRvgvWCU=
-
-vue@^2.1.0:
-  version "2.6.12"
-  resolved "https://registry.npm.taobao.org/vue/download/vue-2.6.12.tgz#f5ebd4fa6bd2869403e29a896aed4904456c9123"
-  integrity sha1-9evU+mvShpQD4pqJau1JBEVskSM=
 
 vue@^3.0.5:
   version "3.0.5"
