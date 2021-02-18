@@ -1,4 +1,4 @@
-import {CopyWritingCorrectService} from "copywriting-correct";
+import { CopyWritingCorrectService } from 'copywriting-correct'
 
 export type ContentString = string | StringWithClassName
 

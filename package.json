@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "serve": "vite preview",
-    "build": "vuedx-typecheck . && vite build",
+    "build": "vuedx-typecheck . && vite build && cp -r assets dist",
     "lint": "vue-cli-service lint",
     "dev": "vite"
   },
