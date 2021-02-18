@@ -1,8 +1,26 @@
 export type ContentString = string | StringWithClassName
 
-export interface StringWithClassName {
+export type StringWithClassName =
+  | StringWithClassName_Base
+  | TelWithClassName
+  | EmailWithClassName
+  | UrlWithClassName
+
+export interface StringWithClassName_Base {
   value: string
   className?: string
+}
+
+export interface TelWithClassName extends StringWithClassName_Base {
+  tel: string
+}
+
+export interface EmailWithClassName extends StringWithClassName_Base {
+  email: string
+}
+
+export interface UrlWithClassName extends StringWithClassName_Base {
+  url: string
 }
 
 export type WonderfulCV =
@@ -27,6 +45,7 @@ export interface WonderfulCV_T<T extends BasicInfoStyle, P extends SectionTitleS
     sectionTitleStyle: P
   }
   name: ContentString
+  title: string
   photo?: string // url
   basicInfo: Array<BasicInfo<T>> | Array<BasicInfoRow<T>>
   pages: Array<Page<P>>
@@ -44,8 +63,8 @@ export type BasicInfoStyle = 'text' | 'icon' | 'concise'
 export type BasicInfoLayout = 'left' | 'center' | 'avatar'
 
 export interface Page<T extends SectionTitleStyle> {
-  sections: Section<T> | Array<Section<T>>
-  justifyContent: 'start' | 'space-evenly'
+  sections: Array<Section<T>>
+  justifyContent: 'flex-start' | 'space-evenly'
 }
 
 export type SectionTitleStyle = 'professional' | 'fresh' | 'prominent' | 'icon'

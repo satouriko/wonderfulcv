@@ -2,25 +2,50 @@
   <div
     class="page"
     :style="style"
-  ><h1>Page {{ pageIndex }}</h1></div>
+  >
+    <BasicInfo
+      v-if="pageIndex === 0"
+      :wonderfulCV="wonderfulCV"
+    ></BasicInfo>
+    <Section
+      v-for="(_, index) of page.sections"
+      :key="index"
+      :wonderfulCV="wonderfulCV"
+      :pageIndex="pageIndex"
+      :sectionIndex="index"
+    ></Section>
+  </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { WonderfulCV } from "../wonderfulcv";
+import { defineComponent, PropType } from 'vue'
+import { WonderfulCV } from '../wonderfulcv'
+import BasicInfo from './BasicInfo.vue'
+import Section from './Section.vue'
 
 export default defineComponent({
+  components: { Section, BasicInfo },
   props: {
-    wonderfulCV: Object as PropType<WonderfulCV>,
-    pageIndex: Number
+    wonderfulCV: {
+      type: Object as PropType<WonderfulCV>,
+      required: true
+    },
+    pageIndex: {
+      type: Number,
+      required: true
+    }
   },
   computed: {
+    page () {
+      return this.wonderfulCV.pages[this.pageIndex]
+    },
     style () {
       let padding = this.wonderfulCV.arrangement.margin
       if (typeof this.wonderfulCV.arrangement.margin === 'number') {
         padding = `${padding}mm`
       }
-      return `padding: ${padding}`
+      const justifyContent = this.page.justifyContent
+      return `padding: ${padding}; justify-content: ${justifyContent}`
     }
   }
 })
@@ -38,6 +63,8 @@ export default defineComponent({
   background: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 @media print {

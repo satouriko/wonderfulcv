@@ -8,9 +8,13 @@ const wonderfulCV: WonderfulCV = {
     sectionTitleStyle: 'professional'
   },
   name: '陈媛媛（Abbey）',
+  title: '陈媛媛的简历',
+  photo: '/assets/logo.png',
   basicInfo: [[{
+    tel: '130-0122-7303',
     value: '130-0122-7303'
   }, {
+    email: 'abbey@jobmail.vip',
     value: 'abbey@jobmail.vip'
   }], [{
     value: '北京市朝阳区光华路1号'

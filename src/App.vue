@@ -3,7 +3,7 @@
     v-for="(_, index) of wonderfulCV.pages"
     :key="index"
     :wonderfulCV="wonderfulCV"
-    :pageIndex="index + 1"
+    :pageIndex="index"
   ></Page>
 </template>
 
@@ -18,6 +18,9 @@ export default defineComponent({
   },
   setup () {
     return { wonderfulCV }
+  },
+  mounted () {
+    document.title = wonderfulCV.title
   }
 })
 </script>
@@ -28,6 +31,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 4mm;
+  line-height: 1.5;
 }
 
 body {
