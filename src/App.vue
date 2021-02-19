@@ -41,4 +41,8 @@ body {
   margin: 0;
   padding: 0;
 }
+
+a {
+  color: var(--theme-color);
+}
 </style>

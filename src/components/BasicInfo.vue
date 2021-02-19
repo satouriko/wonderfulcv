@@ -16,7 +16,10 @@
           v-for="(info, index) of row"
           :key="index"
           class="info"
-        >{{ getContentString(info) }}</span>
+        >
+          <a :href="getContentStringHref(info)"
+          >{{ getContentString(info) }}</a>
+        </span>
       </div>
     </div>
   </div>
@@ -102,5 +105,4 @@ h1 {
   height: 100%;
   vertical-align: bottom;
 }
-
 </style>

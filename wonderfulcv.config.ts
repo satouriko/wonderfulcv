@@ -10,6 +10,7 @@ const wonderfulCV: WonderfulCV = {
   },
   name: '陈媛媛（Abbey）',
   title: '陈媛媛的简历',
+  url: 'https://wonderfulcv.js.org',
   photo: '/assets/logo.png',
   basicInfo: [[{
     tel: '130-0122-7303',

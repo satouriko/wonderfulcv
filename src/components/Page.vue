@@ -75,7 +75,8 @@ export default defineComponent({
 @media print {
   .page {
     margin: 0 !important;
-    border: 1px transparent solid;
+    border: 1px transparent solid !important;
+    box-shadow: none !important;
   }
   @page {
     size: 21cm 29.7cm;

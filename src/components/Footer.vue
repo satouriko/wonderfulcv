@@ -1,7 +1,8 @@
 <template>
   <div class="footer">
     <span class="date">{{ formatDate() }}</span>
-    <span class="title">{{ wonderfulCV.title }}</span>
+    <a class="title" href="" @click="print">{{ wonderfulCV.title }}</a>
+    <a class="title print" :href="wonderfulCV.url" @click="print">{{ wonderfulCV.title }}</a>
     <span class="page-index">{{ pageIndex + 1 }} / {{ wonderfulCV.pages.length }}</span>
   </div>
 </template>
@@ -24,6 +25,10 @@ export default defineComponent({
   methods: {
     formatDate () {
       return (new Date()).toLocaleDateString()
+    },
+    print (e) {
+      e.preventDefault()
+      window.print()
     }
   }
 })
@@ -46,12 +51,30 @@ export default defineComponent({
   text-align: left;
 }
 
-.footer > span.title {
+.footer > a {
+  text-decoration: none;
+  color: #666;
+}
+
+.footer > a.title {
   text-align: center;
+}
+
+.footer > a.title.print {
+  display: none;
 }
 
 .footer > span.page-index {
   text-align: right;
+}
+
+@media print {
+  .footer > a.title {
+    display: none;
+  }
+  .footer > a.title.print {
+    display: inline;
+  }
 }
 
 </style>

@@ -48,6 +48,7 @@ export interface WonderfulCV_T<T extends BasicInfoStyle, P extends SectionTitleS
   }
   name: ContentString
   title: string
+  url?: string
   photo?: string // url
   basicInfo: Array<BasicInfo<T>> | Array<BasicInfoRow<T>>
   pages: Array<Page<P>>
