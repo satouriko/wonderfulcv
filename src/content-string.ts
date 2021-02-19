@@ -38,6 +38,13 @@ export const ContentStringMixin = {
         }
       }
       return null
+    },
+    getIcon (iconString: string) {
+      const array = iconString.split(':')
+      if (!array[0].startsWith('fa')) {
+        array.unshift('fas')
+      }
+      return array
     }
   }
 }

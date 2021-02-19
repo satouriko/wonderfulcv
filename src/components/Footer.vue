@@ -47,7 +47,7 @@ export default defineComponent({
 .footer {
   display: flex;
   justify-content: space-between;
-  margin-top: 5mm;
+  margin-top: 1.25rem;
   color: #666;
   font-size: 0.9rem;
 }

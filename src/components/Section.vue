@@ -1,6 +1,6 @@
 <template>
   <div class="section-title">
-    <h2>{{ getContentString(section.title) }}</h2>
+    <h2 :class="getContentClass(section.title)">{{ getContentString(section.title) }}</h2>
   </div>
   <Content
     v-for="(_, index) of section.contents"

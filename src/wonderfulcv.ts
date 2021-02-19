@@ -43,20 +43,22 @@ export interface WonderfulCV_T<T extends BasicInfoStyle, P extends SectionTitleS
   arrangement: {
     basicInfoStyle: T
     basicInfoLayout: BasicInfoLayout
+    // 页边距（mm）
     margin: number | string
     sectionTitleStyle: P
   }
   name: ContentString
   title: string
   url?: string
-  photo?: string // url
+  // URL
+  photo?: string
   basicInfo: Array<BasicInfo<T>> | Array<BasicInfoRow<T>>
   pages: Array<Page<P>>
   plugins: Array<CopyWritingCorrectService>
 }
 
 export type BasicInfo<T extends BasicInfoStyle> = T extends 'text'
-  ? StringWithClassName & { name: string }
+  ? StringWithClassName & { name: string | StringWithClassName_Base }
   : T extends 'icon'
     ? StringWithClassName & { icon: string }
     : StringWithClassName

@@ -1,16 +1,18 @@
 <template>
   <div class="content">
-    <div class="content-header">
+    <div
+      :class="`content-header ${content.company ? '' : 'empty'}`"
+    >
       <div
         v-if="content.company"
         class="content-title"
       >
-        <h3>{{ getContentString(content.company) }}</h3>
-        <div>{{ getContentString(content.position) }}</div>
+        <h3 :class="getContentClass(content.company)">{{ getContentString(content.company) }}</h3>
+        <div :class="getContentClass(content.position)">{{ getContentString(content.position) }}</div>
       </div>
       <div class="content-title-aux">
-        <div>{{ getContentString(content.date) }}</div>
-        <div>{{ getContentString(content.location) }}</div>
+        <div :class="getContentClass(content.date)">{{ getContentString(content.date) }}</div>
+        <div :class="getContentClass(content.location)">{{ getContentString(content.location) }}</div>
       </div>
     </div>
     <ul>
@@ -19,8 +21,8 @@
         :key="index"
         class="description"
       >
-        <span class="highlight">{{ getDescriptionHighlight(description) }}</span>
-        <span>{{ getDescriptionRest(description) }}</span>
+        <span :class="`highlight ${getContentClass(description)}`">{{ getDescriptionHighlight(description) }}</span>
+        <span :class="getContentClass(description)">{{ getDescriptionRest(description) }}</span>
       </li>
     </ul>
   </div>
@@ -78,14 +80,22 @@ export default defineComponent({
 </script>
 
 <style>
+.section-title + .content {
+  margin-top: var(--margin);
+}
+
 .content {
-  margin: 1mm 0;
+  margin-bottom: var(--margin);
 }
 
 .content-header {
   display: flex;
   justify-content: space-between;
-  margin: 2mm 0;
+  margin: calc(2 * var(--margin)) 0;
+}
+
+.content-header.empty {
+  margin-bottom: 0;
 }
 
 .content-title {
