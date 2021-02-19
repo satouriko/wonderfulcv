@@ -1,8 +1,17 @@
 <template>
   <div class="footer">
     <span class="date">{{ formatDate() }}</span>
-    <a class="title" href="" @click="print">{{ wonderfulCV.title }}</a>
-    <a class="title print" :href="wonderfulCV.url" @click="print">{{ wonderfulCV.title }}</a>
+    <a class="title" href="" @click="print">
+      {{ wonderfulCV.title }}
+      <font-awesome-icon icon="print"></font-awesome-icon>
+    </a>
+    <a class="title print" :href="wonderfulCV.url" @click="print">
+      {{ wonderfulCV.title }}
+      <font-awesome-icon
+        v-if="wonderfulCV.url"
+        icon="external-link-alt"
+      ></font-awesome-icon>
+    </a>
     <span class="page-index">{{ pageIndex + 1 }} / {{ wonderfulCV.pages.length }}</span>
   </div>
 </template>
