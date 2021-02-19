@@ -62,7 +62,7 @@ export default defineComponent({
 
 .footer > a {
   text-decoration: none;
-  color: #666;
+  color: #666 !important;
 }
 
 .footer > a.title {

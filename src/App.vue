@@ -42,7 +42,7 @@ body {
   padding: 0;
 }
 
-a {
+a[href] {
   color: var(--theme-color);
 }
 </style>
