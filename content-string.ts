@@ -1,7 +1,7 @@
 import { CopyWritingCorrectService } from 'copywriting-correct'
 
 import { ContentString, EmailWithClassName, TelWithClassName, UrlWithClassName } from './wonderfulcv'
-import wonderfulCV from '../wonderfulcv.config'
+import wonderfulCV from './wonderfulcv.config'
 
 export const ContentStringMixin = {
   methods: {
@@ -9,7 +9,7 @@ export const ContentStringMixin = {
       let value = ''
       if (contentString && typeof contentString === 'object') {
         value = contentString.value
-      } else if (contentString) {
+      } else if (typeof contentString === 'string') {
         value = contentString
       }
       for (const plugin of wonderfulCV.plugins) {

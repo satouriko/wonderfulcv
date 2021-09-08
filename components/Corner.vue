@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {
@@ -67,12 +67,12 @@ export default defineComponent({
 }
 
 @media (max-width: 500px) {
-  .github-corner:hover .octo-arm {
-    animation: none;
-  }
-
   .github-corner .octo-arm {
     animation: octocat-wave 560ms ease-in-out;
+  }
+
+  .github-corner:hover .octo-arm {
+    animation: none;
   }
 }
 

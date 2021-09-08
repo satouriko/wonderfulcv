@@ -29,7 +29,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from 'vue'
+import { defineComponent, PropType } from '@nuxtjs/composition-api'
 import { WonderfulCV } from '../wonderfulcv'
 import { ContentStringMixin } from '../content-string'
 
@@ -58,8 +58,10 @@ export default defineComponent({
         .sections[this.sectionIndex].contents[this.contentIndex]
     },
     descriptions () {
+      if (!this.content.description) return []
       return this.content.description instanceof Array
-        ? this.content.description : [this.content.description]
+        ? this.content.description
+        : [this.content.description]
     }
   },
   methods: {

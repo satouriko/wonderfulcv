@@ -1,18 +1,20 @@
 <template>
-  <Page
-    v-for="(_, index) of wonderfulCV.pages"
-    :key="index"
-    :wonderfulCV="wonderfulCV"
-    :pageIndex="index"
-  ></Page>
-  <Corner href="https://github.com/satouriko/wonderfulcv"></Corner>
+  <fragment>
+    <Page
+      v-for="(_, index) of wonderfulCV.pages"
+      :key="index"
+      :wonderfulCV="wonderfulCV"
+      :pageIndex="index"
+    ></Page>
+    <Corner href="https://github.com/satouriko/wonderfulcv"></Corner>
+  </fragment>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import Page from './components/Page.vue'
+import { defineComponent } from '@nuxtjs/composition-api'
 import wonderfulCV from '../wonderfulcv.config'
-import Corner from './components/Corner.vue'
+import Page from '../components/Page.vue'
+import Corner from '../components/Corner.vue'
 
 export default defineComponent({
   components: {
@@ -22,8 +24,10 @@ export default defineComponent({
   setup () {
     return { wonderfulCV }
   },
-  mounted () {
-    document.title = wonderfulCV.title
+  head () {
+    return {
+      title: wonderfulCV.title
+    }
   }
 })
 </script>

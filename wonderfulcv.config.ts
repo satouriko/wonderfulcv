@@ -1,5 +1,5 @@
-import { WonderfulCV } from './src/wonderfulcv'
 import { CopyWritingCorrectService } from 'copywriting-correct'
+import { WonderfulCV } from './wonderfulcv'
 
 const wonderfulCV: WonderfulCV = {
   arrangement: {

@@ -1,5 +1,19 @@
 # WonderfulCV
 
+## 2.0
+
+### Features
+
+- [x] Nuxt 预渲染
+- [ ] 多语言
+- [ ] CSS 字体重载
+
+### Known Issues
+
+- [ ] FOUC，原因是 Nuxt 暂不支持 Vue3，而 vue-fragment 是运行时替换标签
+
+## 原介绍
+
 制作中文简历用 Word 对齐很难操作，用 LaTeX 设置字体、还有模板制作都很复杂。受到 [超级简历网](https://www.wondercv.com) 的启发，我制作了这个快速制作简历的工具。
 
 [超级简历网](https://www.wondercv.com) 上没有复杂的模板，总共只有（基本信息）3 x（模块）4 种排版方式可供选择。但是这却让我感觉足够了，网上太多花哨的简历模板并不适合用来求职。
@@ -10,8 +24,9 @@
 [超级简历网](https://www.wondercv.com) 上还有十分酷炫的「智能一页」功能，这用 Web 技术实现起来也非常简单。
 此外，我还给它加了 [中文文案排版自动纠正](https://github.com/satouriko/copywriting-correct) 的功能。
 
-即便我写了这个项目，我还是推荐大家去 [超级简历网](https://www.wondercv.com) 注册并使用一下。
+即便我写了这个项目，我还是推荐大家去 [超级简历网](https://www.wondercv.com) 注册并体验一下。
 它里面的一些修改简历的建议非常有帮助，而这部分我丝毫没有照搬过来。
+注：用用就行了，不要把真实的个人信息填进去哦
 
 使用它只需要修改项目根目录下的 `wonderfulcv.config.ts` 和 `wonderfulcv.config.css` 就可以了。
 

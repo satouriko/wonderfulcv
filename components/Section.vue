@@ -1,27 +1,29 @@
 <template>
-  <div :class="`section-title ${wonderfulCV.arrangement.sectionTitleStyle}`">
-    <h2 :class="getContentClass(section.title)">
-      <font-awesome-icon
-        v-if="wonderfulCV.arrangement.sectionTitleStyle === 'icon' && section.icon"
-        :icon="getIcon(section.icon)"
-        class="icon"
-      ></font-awesome-icon>
-      {{ getContentString(section.title) }}
-      <span class="pseudo"></span>
-    </h2>
-  </div>
-  <Content
-    v-for="(_, index) of section.contents"
-    :key="index"
-    :wonderfulCV="wonderfulCV"
-    :pageIndex="pageIndex"
-    :sectionIndex="sectionIndex"
-    :contentIndex="index"
-  ></Content>
+  <fragment>
+    <div :class="`section-title ${wonderfulCV.arrangement.sectionTitleStyle}`">
+      <h2 :class="getContentClass(section.title)">
+        <font-awesome-icon
+          v-if="wonderfulCV.arrangement.sectionTitleStyle === 'icon' && section.icon"
+          :icon="getIcon(section.icon)"
+          class="icon"
+        ></font-awesome-icon>
+        {{ getContentString(section.title) }}
+        <span class="pseudo"></span>
+      </h2>
+    </div>
+    <Content
+      v-for="(_, index) of section.contents"
+      :key="index"
+      :wonderfulCV="wonderfulCV"
+      :pageIndex="pageIndex"
+      :sectionIndex="sectionIndex"
+      :contentIndex="index"
+    ></Content>
+  </fragment>
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from 'vue'
+import { defineComponent, PropType } from '@nuxtjs/composition-api'
 import { WonderfulCV } from '../wonderfulcv'
 import { ContentStringMixin } from '../content-string'
 import Content from './Content.vue'

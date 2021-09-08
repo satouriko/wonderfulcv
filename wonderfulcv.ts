@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define,camelcase */
 import { CopyWritingCorrectService } from 'copywriting-correct'
 
 export type ContentString = string | StringWithClassName

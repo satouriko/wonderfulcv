@@ -17,8 +17,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from 'vue'
-import { WonderfulCV } from '../wonderfulcv.ts'
+import { defineComponent, PropType } from '@nuxtjs/composition-api'
+import { WonderfulCV } from '../wonderfulcv'
 
 export default defineComponent({
   props: {
@@ -81,6 +81,7 @@ export default defineComponent({
   .footer > a.title {
     display: none;
   }
+
   .footer > a.title.print {
     display: inline;
   }
