@@ -58,7 +58,8 @@ const config: NuxtConfig = {
 }())
         `
       }
-    ]
+    ],
+    __dangerouslyDisableSanitizers: ['script']
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
