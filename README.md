@@ -5,8 +5,7 @@
 ### Features
 
 - [x] Nuxt 预渲染
-- [ ] 多语言
-- [ ] CSS 字体重载
+- [x] 多语言
 
 ### Known Issues
 
@@ -38,10 +37,6 @@ For English users, try to make their CVs with [LaTeX](https://www.overleaf.com/l
 However, for Chinese users, it's too tedious to make LaTeX render Chinese characters properly.
 That's why this project was born.
 
-Although I believe it should be a great tool for making English CVs too,
-since it's originally designed for my personal's desperate need of making a CV in Chinese,
-I haven't add those features useful in English yet, such as
-English fonts, italic font style, small capitals font style, etc.
-I'll add them sooner or later.
+This template should also be a great tool for making English CVs too.
 
 To use, just fill in `wonderfulcv.config.ts` and `wonderfulcv.config.css` and you'll be good to go.

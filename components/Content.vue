@@ -8,18 +8,18 @@
         class="content-title"
       >
         <h3 :class="getContentClass(content.company)">
-          {{ getContentString(content.company) }}
+          {{ getContentString(wonderfulCV, content.company) }}
         </h3>
         <div :class="getContentClass(content.position)">
-          {{ getContentString(content.position) }}
+          {{ getContentString(wonderfulCV, content.position) }}
         </div>
       </div>
       <div class="content-title-aux">
         <div :class="getContentClass(content.date)">
-          {{ getContentString(content.date) }}
+          {{ getContentString(wonderfulCV, content.date) }}
         </div>
         <div :class="getContentClass(content.location)">
-          {{ getContentString(content.location) }}
+          {{ getContentString(wonderfulCV, content.location) }}
         </div>
       </div>
     </div>
@@ -77,14 +77,14 @@ export default defineComponent({
   methods: {
     getDescriptionHighlight (desc) {
       if (!this.content.descriptionHighlightSeparator) return null
-      const str = this.getContentString(desc, true)
+      const str = this.getContentString(this.wonderfulCV, desc, true)
       return str.split(this.content.descriptionHighlightSeparator)[0] +
         this.content.descriptionHighlightSeparator
     },
     getDescriptionRest (desc) {
       const highlight = this.getDescriptionHighlight(desc)
-      if (!highlight) return this.getContentString(desc, true)
-      return this.getContentString(desc, true).substring(highlight.length)
+      if (!highlight) return this.getContentString(this.wonderfulCV, desc, true)
+      return this.getContentString(this.wonderfulCV, desc, true).substring(highlight.length)
     }
   }
 })
@@ -113,6 +113,17 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-synthesis: weight;
+}
+
+h3 {
+  font-size: 1rem;
+  margin: 0;
+  line-height: inherit;
+}
+
+.content-title h3 {
+  font-style: normal;
 }
 
 .content-title-aux {
@@ -120,17 +131,12 @@ export default defineComponent({
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
+  font-synthesis: weight;
 }
 
 ul {
   margin: 0;
   padding-left: 5mm;
-}
-
-h3 {
-  font-size: 1rem;
-  margin: 0;
-  line-height: inherit;
 }
 
 .highlight {

@@ -41,6 +41,7 @@ export type WonderfulCV =
   | WonderfulCV_T<'concise', 'icon'>
 
 export interface WonderfulCV_T<T extends BasicInfoStyle, P extends SectionTitleStyle> {
+  lang: string
   arrangement: {
     basicInfoStyle: T
     basicInfoLayout: BasicInfoLayout

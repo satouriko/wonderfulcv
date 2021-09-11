@@ -1,4 +1,6 @@
-export default {
+import type { NuxtConfig } from '@nuxt/types'
+
+const config: NuxtConfig = {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
@@ -66,7 +68,10 @@ export default {
   },
 
   generate: {
+    routes: ['/zh', '/en'],
     // choose to suit your project
     interval: 2000
   }
 }
+
+export default config

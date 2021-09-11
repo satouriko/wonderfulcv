@@ -1,6 +1,6 @@
 <template>
   <div
-    class="page"
+    :class="`page ${wonderfulCV.lang}`"
     :style="style"
   >
     <BasicInfo

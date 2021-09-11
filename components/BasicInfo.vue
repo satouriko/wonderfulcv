@@ -5,7 +5,7 @@
     </div>
     <div class="basic-info">
       <h1 :class="getContentClass(wonderfulCV.name)">
-        {{ getContentString(wonderfulCV.name) }}
+        {{ getContentString(wonderfulCV, wonderfulCV.name) }}
       </h1>
       <div
         v-for="(row, index) of basicInfoRows"
@@ -21,13 +21,13 @@
             <span
               v-if="wonderfulCV.arrangement.basicInfoStyle === 'text' && info.name"
               :class="getContentClass(info.name)"
-            >{{ getContentString(info.name) }}</span><font-awesome-icon
+            >{{ getContentString(wonderfulCV, info.name) }}</span><font-awesome-icon
               v-if="wonderfulCV.arrangement.basicInfoStyle === 'icon' && info.icon"
               :icon="getIcon(info.icon)"
               class="icon"
             /><span
               :class="`link ${getContentClass(info)}`"
-            >{{ getContentString(info) }}</span>
+            >{{ getContentString(wonderfulCV, info) }}</span>
           </a>
         </span>
       </div>

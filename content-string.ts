@@ -1,11 +1,10 @@
 import { CopyWritingCorrectService } from 'copywriting-correct'
 
-import { ContentString, EmailWithClassName, TelWithClassName, UrlWithClassName } from './wonderfulcv'
-import wonderfulCV from './wonderfulcv.config'
+import { ContentString, EmailWithClassName, TelWithClassName, UrlWithClassName, WonderfulCV } from './wonderfulcv'
 
 export const ContentStringMixin = {
   methods: {
-    getContentString (contentString: ContentString, copyWritingCorrect = false) {
+    getContentString (wonderfulCV: WonderfulCV, contentString: ContentString, copyWritingCorrect = false) {
       let value = ''
       if (contentString && typeof contentString === 'object') {
         value = contentString.value

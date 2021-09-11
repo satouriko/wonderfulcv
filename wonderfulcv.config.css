@@ -1,10 +1,25 @@
 body {
   /* 主题色 */
   --theme-color: #000;
+}
 
+.page.zh {
   /* 行距 */
   line-height: 1.5;
 
   /* 段距 */
   --margin: 0.25rem;
+}
+
+.page.en {
+  /* 行距 */
+  line-height: 1.5;
+
+  /* 段距 */
+  --margin: 0.125rem;
+}
+
+.page.en .content-title,
+.page.en .content-title-aux {
+  font-style: italic; /* 英文斜体 */
 }

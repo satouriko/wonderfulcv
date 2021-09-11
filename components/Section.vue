@@ -7,7 +7,7 @@
           :icon="getIcon(section.icon)"
           class="icon"
         />
-        {{ getContentString(section.title) }}
+        {{ getContentString(this.wonderfulCV, section.title) }}
         <span class="pseudo" />
       </h2>
     </div>
@@ -113,6 +113,7 @@ h2 {
   line-height: 1.4rem;
   display: inline-block;
   padding: 1.5mm 0;
+  font-variant-caps: small-caps;
 }
 
 .section-title.prominent > h2 {
