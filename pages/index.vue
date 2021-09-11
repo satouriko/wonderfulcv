@@ -3,10 +3,10 @@
     <Page
       v-for="(_, index) of wonderfulCV.pages"
       :key="index"
-      :wonderfulCV="wonderfulCV"
-      :pageIndex="index"
-    ></Page>
-    <Corner href="https://github.com/satouriko/wonderfulcv"></Corner>
+      :wonderful-c-v="wonderfulCV"
+      :page-index="index"
+    />
+    <Corner href="https://github.com/satouriko/wonderfulcv" />
   </fragment>
 </template>
 

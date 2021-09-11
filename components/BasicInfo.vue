@@ -1,7 +1,7 @@
 <template>
   <div :class="headerClass">
     <div v-if="wonderfulCV.photo" class="photo-wrap">
-      <img alt="photo" class="photo" :src="wonderfulCV.photo" />
+      <img alt="photo" class="photo" :src="wonderfulCV.photo">
     </div>
     <div class="basic-info">
       <h1 :class="getContentClass(wonderfulCV.name)">
@@ -13,8 +13,8 @@
         class="row"
       >
         <span
-          v-for="(info, index) of row"
-          :key="index"
+          v-for="(info, i) of row"
+          :key="i"
           class="info"
         >
           <a :href="getContentStringHref(info)">
@@ -25,7 +25,7 @@
               v-if="wonderfulCV.arrangement.basicInfoStyle === 'icon' && info.icon"
               :icon="getIcon(info.icon)"
               class="icon"
-            ></font-awesome-icon><span
+            /><span
               :class="`link ${getContentClass(info)}`"
             >{{ getContentString(info) }}</span>
           </a>
@@ -36,11 +36,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from '@nuxtjs/composition-api'
+import { defineComponent } from '@nuxtjs/composition-api'
+import type { PropType } from '@nuxtjs/composition-api'
 import { WonderfulCV } from '../wonderfulcv'
 import { ContentStringMixin } from '../content-string'
 
 export default defineComponent({
+  mixins: [ContentStringMixin],
   props: {
     wonderfulCV: {
       type: Object as PropType<WonderfulCV>,
@@ -57,8 +59,7 @@ export default defineComponent({
     headerClass () {
       return `header ${this.wonderfulCV.arrangement.basicInfoLayout} style-${this.wonderfulCV.arrangement.basicInfoStyle}`
     }
-  },
-  mixins: [ContentStringMixin]
+  }
 })
 </script>
 
@@ -129,16 +130,16 @@ h1 {
   font-size: 1rem;
 }
 
-.info:first-child::before {
-  display: none;
-}
-
 .info::before {
   content: '';
   border-left: 1px solid #666;
   margin: 0 0.5rem;
   height: 100%;
   vertical-align: bottom;
+}
+
+.info:first-child::before {
+  display: none;
 }
 
 .header.style-icon .info::before {

@@ -5,24 +5,25 @@
   >
     <BasicInfo
       v-if="pageIndex === 0"
-      :wonderfulCV="wonderfulCV"
-    ></BasicInfo>
+      :wonderful-c-v="wonderfulCV"
+    />
     <Section
       v-for="(_, index) of page.sections"
       :key="index"
-      :wonderfulCV="wonderfulCV"
-      :pageIndex="pageIndex"
-      :sectionIndex="index"
-    ></Section>
+      :wonderful-c-v="wonderfulCV"
+      :page-index="pageIndex"
+      :section-index="index"
+    />
     <Footer
-      :wonderfulCV="wonderfulCV"
-      :pageIndex="pageIndex"
-    ></Footer>
+      :wonderful-c-v="wonderfulCV"
+      :page-index="pageIndex"
+    />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from '@nuxtjs/composition-api'
+import { defineComponent } from '@nuxtjs/composition-api'
+import type { PropType } from '@nuxtjs/composition-api'
 import { WonderfulCV } from '../wonderfulcv'
 import BasicInfo from './BasicInfo.vue'
 import Section from './Section.vue'
@@ -78,6 +79,7 @@ export default defineComponent({
     border: 1px transparent solid !important;
     box-shadow: none !important;
   }
+
   @page {
     size: 21cm 29.7cm;
   }

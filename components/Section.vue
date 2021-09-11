@@ -6,30 +6,32 @@
           v-if="wonderfulCV.arrangement.sectionTitleStyle === 'icon' && section.icon"
           :icon="getIcon(section.icon)"
           class="icon"
-        ></font-awesome-icon>
+        />
         {{ getContentString(section.title) }}
-        <span class="pseudo"></span>
+        <span class="pseudo" />
       </h2>
     </div>
     <Content
       v-for="(_, index) of section.contents"
       :key="index"
-      :wonderfulCV="wonderfulCV"
-      :pageIndex="pageIndex"
-      :sectionIndex="sectionIndex"
-      :contentIndex="index"
-    ></Content>
+      :wonderful-c-v="wonderfulCV"
+      :page-index="pageIndex"
+      :section-index="sectionIndex"
+      :content-index="index"
+    />
   </fragment>
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from '@nuxtjs/composition-api'
+import { defineComponent } from '@nuxtjs/composition-api'
+import type { PropType } from '@nuxtjs/composition-api'
 import { WonderfulCV } from '../wonderfulcv'
 import { ContentStringMixin } from '../content-string'
 import Content from './Content.vue'
 
 export default defineComponent({
   components: { Content },
+  mixins: [ContentStringMixin],
   props: {
     wonderfulCV: {
       type: Object as PropType<WonderfulCV>,
@@ -49,8 +51,7 @@ export default defineComponent({
       return this.wonderfulCV.pages[this.pageIndex]
         .sections[this.sectionIndex]
     }
-  },
-  mixins: [ContentStringMixin]
+  }
 })
 </script>
 
@@ -78,7 +79,9 @@ export default defineComponent({
   pointer-events: none;
 }
 
-.section-title.fresh, .section-title.prominent, .section-title.icon {
+.section-title.fresh,
+.section-title.prominent,
+.section-title.icon {
   position: relative;
   line-height: 1.3;
   margin: calc(2 * var(--margin)) 0 0 0;

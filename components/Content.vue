@@ -7,12 +7,20 @@
         v-if="content.company"
         class="content-title"
       >
-        <h3 :class="getContentClass(content.company)">{{ getContentString(content.company) }}</h3>
-        <div :class="getContentClass(content.position)">{{ getContentString(content.position) }}</div>
+        <h3 :class="getContentClass(content.company)">
+          {{ getContentString(content.company) }}
+        </h3>
+        <div :class="getContentClass(content.position)">
+          {{ getContentString(content.position) }}
+        </div>
       </div>
       <div class="content-title-aux">
-        <div :class="getContentClass(content.date)">{{ getContentString(content.date) }}</div>
-        <div :class="getContentClass(content.location)">{{ getContentString(content.location) }}</div>
+        <div :class="getContentClass(content.date)">
+          {{ getContentString(content.date) }}
+        </div>
+        <div :class="getContentClass(content.location)">
+          {{ getContentString(content.location) }}
+        </div>
       </div>
     </div>
     <ul>
@@ -29,11 +37,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from '@nuxtjs/composition-api'
+import { defineComponent } from '@nuxtjs/composition-api'
+import type { PropType } from '@nuxtjs/composition-api'
 import { WonderfulCV } from '../wonderfulcv'
 import { ContentStringMixin } from '../content-string'
 
 export default defineComponent({
+  mixins: [ContentStringMixin],
   props: {
     wonderfulCV: {
       type: Object as PropType<WonderfulCV>,
@@ -76,18 +86,17 @@ export default defineComponent({
       if (!highlight) return this.getContentString(desc, true)
       return this.getContentString(desc, true).substring(highlight.length)
     }
-  },
-  mixins: [ContentStringMixin]
+  }
 })
 </script>
 
 <style>
-.section-title + .content {
-  margin-top: var(--margin);
-}
-
 .content {
   margin-bottom: var(--margin);
+}
+
+.section-title + .content {
+  margin-top: var(--margin);
 }
 
 .content-header {

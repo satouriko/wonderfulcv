@@ -1,8 +1,10 @@
 body {
-    /* 主题色 */
-    --theme-color: #000;
-    /* 行距 */
-    line-height: 1.5;
-    /* 段距 */
-    --margin: 0.25rem;
+  /* 主题色 */
+  --theme-color: #000;
+
+  /* 行距 */
+  line-height: 1.5;
+
+  /* 段距 */
+  --margin: 0.25rem;
 }
