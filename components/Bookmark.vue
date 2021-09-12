@@ -2,7 +2,7 @@
   <nuxt-link
     :class="`bookmark ${bordered ? 'bordered' : ''} ${selected ? 'selected' : ''}`"
     :to="`/${lang}/`"
-    :style="`top: ${8 + index * 12}mm`"
+    :style="`top: ${8 + index * 12}mm; right: ${8 + index * 12}mm;`"
   >
     {{ label }}
   </nuxt-link>
@@ -35,11 +35,8 @@ export default defineComponent({
 .bookmark {
   display: block;
   position: absolute;
-  padding: 3mm 5mm;
   line-height: 4mm;
-  min-width: 20mm;
   text-align: center;
-  right: calc(100% - 3mm);
   z-index: 1;
 }
 
@@ -57,6 +54,23 @@ export default defineComponent({
 
 .bookmark.selected.bordered {
   z-index: 1;
+}
+
+@media (min-aspect-ratio: 1/1) {
+  .bookmark {
+    right: calc(100% - 3mm) !important;
+    padding: 3mm 5mm;
+    min-width: 20mm;
+  }
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .bookmark {
+    top: calc(100% - 3mm) !important;
+    padding: 5mm 3mm;
+    min-height: 20mm;
+    writing-mode: vertical-rl;
+  }
 }
 
 @media print {
