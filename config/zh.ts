@@ -16,7 +16,7 @@ const zhConfig: WonderfulCV = {
   name: '陈媛媛（Abbey）',
   title: '陈媛媛的简历',
   url: 'https://wonderfulcv.js.org',
-  photo: '/assets/logo.png',
+  photo: '/assets/photo.png',
   basicInfo: [[{
     tel: '130-0122-7303',
     value: '130-0122-7303'

@@ -15,7 +15,7 @@ const enConfig: WonderfulCV = {
   name: 'Abbey Chen (Chen,Yuanyuan)',
   title: "Abbey Chen's Resume",
   url: 'https://wonderfulcv.js.org/en/',
-  photo: '/assets/logo.png',
+  photo: '/assets/photo.png',
   basicInfo: [[{
     tel: '+86-130-0122-7303',
     value: '+86-130-0122-7303'
