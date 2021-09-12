@@ -3,6 +3,10 @@ import { WonderfulCV } from '../wonderfulcv'
 
 const zhConfig: WonderfulCV = {
   lang: 'zh',
+  navigation: [
+    { lang: 'zh', label: '中文' },
+    { lang: 'en', label: '英文' }
+  ],
   arrangement: {
     basicInfoStyle: 'concise',
     basicInfoLayout: 'center',

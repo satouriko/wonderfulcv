@@ -44,6 +44,7 @@
     "nuxt-vite": "^0.2.4",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
+    "vue-frag": "^1.2.4",
     "vue-fragment": "^1.5.2"
   }
 }

@@ -42,6 +42,10 @@ export type WonderfulCV =
 
 export interface WonderfulCV_T<T extends BasicInfoStyle, P extends SectionTitleStyle> {
   lang: string
+  navigation: Array<{
+    lang: string
+    label: string
+  }>
   arrangement: {
     basicInfoStyle: T
     basicInfoLayout: BasicInfoLayout

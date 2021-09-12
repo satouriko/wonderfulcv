@@ -1,5 +1,5 @@
 <template>
-  <fragment>
+  <div v-frag>
     <div :class="`section-title ${wonderfulCV.arrangement.sectionTitleStyle}`">
       <h2 :class="getContentClass(section.title)">
         <font-awesome-icon
@@ -7,7 +7,7 @@
           :icon="getIcon(section.icon)"
           class="icon"
         />
-        {{ getContentString(this.wonderfulCV, section.title) }}
+        {{ getContentString(wonderfulCV, section.title) }}
         <span class="pseudo" />
       </h2>
     </div>
@@ -19,7 +19,7 @@
       :section-index="sectionIndex"
       :content-index="index"
     />
-  </fragment>
+  </div>
 </template>
 
 <script lang="ts">

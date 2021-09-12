@@ -2,6 +2,10 @@ import { WonderfulCV } from '../wonderfulcv'
 
 const enConfig: WonderfulCV = {
   lang: 'en',
+  navigation: [
+    { lang: 'zh', label: 'Chinese' },
+    { lang: 'en', label: 'English' }
+  ],
   arrangement: {
     basicInfoStyle: 'concise',
     basicInfoLayout: 'left',

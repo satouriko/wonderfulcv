@@ -10870,6 +10870,11 @@ vue-eslint-parser@^7.1.1, vue-eslint-parser@^7.10.0:
     lodash "^4.17.21"
     semver "^6.3.0"
 
+vue-frag@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.npmjs.org/vue-frag/-/vue-frag-1.2.4.tgz#e15da54af385711ea1055386eb97040a895bc0a1"
+  integrity sha512-gdpdPbMohnMZwu1VxWplX9OAu9Oa75H/XKXeV05dgx1IyNDL2WhHtBN+2Arlqj7rA8f6zqpn1gyMddm2nZaVZg==
+
 vue-fragment@^1.5.2:
   version "1.5.2"
   resolved "https://registry.npmjs.org/vue-fragment/-/vue-fragment-1.5.2.tgz#310017170c564c4aad95da14c185c92c6784fd3c"

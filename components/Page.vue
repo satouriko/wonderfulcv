@@ -18,6 +18,7 @@
       :wonderful-c-v="wonderfulCV"
       :page-index="pageIndex"
     />
+    <slot />
   </div>
 </template>
 
@@ -68,9 +69,9 @@ export default defineComponent({
   border: 1px #d3d3d3 solid;
   background: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 @media print {
