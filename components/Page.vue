@@ -82,7 +82,8 @@ export default defineComponent({
   }
 
   @page {
-    size: 21cm 29.7cm;
+    size: a4;
+    margin: 0;
   }
 }
 </style>
