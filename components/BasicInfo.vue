@@ -17,7 +17,7 @@
           :key="i"
           class="info"
         >
-          <a :href="getContentStringHref(info)">
+          <a :href="getContentStringHref(info)" target="_blank">
             <span
               v-if="wonderfulCV.arrangement.basicInfoStyle === 'text' && info.name"
               :class="getContentClass(info.name)"

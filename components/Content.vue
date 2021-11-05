@@ -7,9 +7,9 @@
         v-if="content.company"
         class="content-title"
       >
-        <h3 :class="getContentClass(content.company)">
-          {{ getContentString(wonderfulCV, content.company) }}
-        </h3>
+        <a :href="getContentStringHref(content.company)" target="_blank">
+          <h3 :class="getContentClass(content.company)">{{ getContentString(wonderfulCV, content.company) }}</h3>
+        </a>
         <div :class="getContentClass(content.position)">
           {{ getContentString(wonderfulCV, content.position) }}
         </div>
